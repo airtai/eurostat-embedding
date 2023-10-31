@@ -44,7 +44,20 @@ dependencies = [
     "eurostat>=1.0.4",
     "torch>=2.1.0",
     "pandas",
+    "ipywidgets",
+    "InstructorEmbedding>=1.0.1",
+    "transformers>=4.20.0",
+    "datasets>=2.2.0",
+    "pyarrow>=8.0.0",
+    "jsonlines",
     "numpy",
+    "requests>=2.26.0",
+    "scikit_learn>=1.0.2",
+    "scipy",
+    "sentence_transformers>=2.2.0",
+    "torch",
+    "tqdm",
+    "rich",
 ]
 
 [project.optional-dependencies]
@@ -77,17 +90,19 @@ lint = [
     "pre-commit==3.5.0",
     "semgrep==1.46.0",
     "detect-secrets==1.4.0",
+    "nbqa",
 ]
 
 testing = [
     "coverage[toml]>=7.2",
     "pytest==7.4.3",
     "dirty-equals==0.6.0",
+    "vcrpy==5.1.0",
 ]
 
 publish = ["hatch==1.7.0"]
 
-dev = ["faststream[lint,testing,publish]"]
+dev = ["faststream[devdocs,lint,testing,publish]"]
 
 [project.urls]
 Source = "https://github.com/airtai/eurostat-embedding"
